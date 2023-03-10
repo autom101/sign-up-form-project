@@ -2,7 +2,9 @@
 
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Space+Grotesk:wght@600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
 
 :root {
   box-sizing: border-box;
@@ -12,30 +14,52 @@ body {
   height: 100vh;
   display: flex;
   overflow: hidden;
-  font-family: "Varela Round";
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .big-image {
   position: relative;
 }
 
-.big-image div {
+.big-image .logo-shadow {
   position: absolute;
-  top: 20%;
-  background-color: black;
+  bottom: 76.5%;
+  background-color: rgba(220, 117, 143, 0.1);
   width: 100%;
-  height: 20%;
+  height: 15%;
+  z-index: 2;
+
+  font-size: 100px;
+  font-weight: bold;
+  font-family: "Skranji", cursive;
+  color: ghostwhite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-shadow img {
+  height: 90%;
+  width: auto;
+}
+
+.logo-shadow p {
+  z-index: 5;
 }
 
 figure {
   height: 100%;
   width: 55vw;
   position: relative;
+  z-index: 1;
 }
 
-img {
+figure img {
   height: 100%;
   width: 100%;
+  z-index: inherit;
 }
 
 figcaption {
@@ -78,7 +102,7 @@ header {
   padding-left: 50px;
   justify-content: center;
 
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -1px -1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .header-text {
@@ -89,9 +113,13 @@ header {
   width: 80%;
 }
 
-span {
+.header-text span {
   display: inline-block;
   margin: 10px 0;
+}
+
+span.italic {
+  font-style: italic;
 }
 
 main {
@@ -101,11 +129,11 @@ main {
 }
 
 main > h2 {
-  margin: 10px 0;
+  margin: 15px 0;
   padding-left: 50px;
   height: 5%;
 
-  font-size: 24px;
+  font-size: 28px;
 }
 
 form {
@@ -114,27 +142,29 @@ form {
 }
 
 .form-top {
-  height: 65%;
-  width: 70%;
+  height: 52%;
+  width: 100%;
   padding-left: 50px;
+  /* box-shadow: inset -1px -2px 2px 2px rgba(0, 0, 0, 0.2); */
 }
 
 .form-bottom {
-  height: 35%;
+  height: 48%;
   background-color: #ce96a6;
   padding-left: 50px;
-  justify-content: center;
+  /* justify-content: center; */
+  box-shadow: inset 0px 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .form-row {
   width: 70%;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .form-row-left,
 .form-row-right {
-  width: 50%;
+  width: 30%;
   margin: 7px 100px 7px 0;
 }
 
@@ -168,6 +198,7 @@ input:focus:valid {
 }
 
 button {
+  margin-top: 30px;
   font-size: 22px;
   font-weight: bold;
   color: snow;
@@ -179,12 +210,15 @@ button {
 
   border: 1px solid #ce96a6;
   border-radius: 7px;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
 }
 
 button:hover {
   text-decoration: underline;
   background-color: rgba(218, 108, 136, 0.8);
   cursor: pointer;
+  scale: 1.02;
 }
 
 p {
