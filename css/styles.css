@@ -1,11 +1,18 @@
+/* Pick colors using coolors.co
+
+*/
+
+:root {
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
-  overflow: hidden;
   display: flex;
 }
 
 figure {
-  height: 100vh;
+  height: 100%;
   width: 50vw;
   position: relative;
 }
@@ -16,17 +23,51 @@ img {
 }
 
 .form-side {
+  height: 100%;
+  width: 50vw;
+  padding-left: 50px;
+}
+
+.form-side,
+main,
+form,
+.form-top,
+.form-bottom {
   display: flex;
   flex-direction: column;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+header {
+  height: 30%;
+  width: 50vw;
+  background-color: #ce96a6;
 }
 
-.form-column-left,
-.form-column-right {
+main {
+  height: 70%;
+  width: 50vw;
+  background-color: #dec0ba;
+}
+
+main > h2 {
+  height: 5%;
+}
+
+.form-top {
+  height: 60%;
+}
+
+.form-bottom {
+  height: 35%;
+  background-color: #ce96a6;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-row-left,
+.form-row-right {
   display: flex;
   flex-direction: column;
 }
