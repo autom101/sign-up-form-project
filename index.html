@@ -13,6 +13,10 @@
 
     <body>
         <div class="big-image">
+            <div>
+                <img src="./images/odin.png" alt="Odin logo">
+                asdfjklasdfh
+            </div>
             <figure>
                 <img src="./images/dreamy-mountains.jpg" alt="Image of hills with pinkish-sky">
                 <figcaption>Photo by <a
@@ -27,17 +31,20 @@
             <header>
                 <div class="header-text">
                     <h1>
-                        This is not a real online service! But you can still fill this up to make your day that much
-                        better.
-                        Sign up <em>today</em> to get started!
+                        <span>
+                            This is not a real online service! But you can still fill this up to make your day that much
+                            better.
+                        </span>
 
-                        You <em>know</em> you want to.
+                        <span>Sign up <i>today</i> to get started!</span>
+
+                        <span>You <em>know</em> you want to.</span>
                     </h1>
                 </div>
             </header>
 
             <main>
-                <h2>Let's goooooo</h2>
+                <h2>Let's goooooo!</h2>
                 <form action="#" method="get" class="form">
                     <div class="form-top">
                         <div class="form-row">
@@ -61,19 +68,25 @@
 
                             <div class="form-row-right">
                                 <label for="phone-number">PHONE NUMBER</label>
-                                <input id="phone-number" type="number">
+                                <input id="phone-number" type="text">
                             </div>
 
                         </div>
                         <div class="form-row">
                             <div class="form-row-left">
-                                <label for="password">PASSWORD</label>
-                                <input id="password" type="password">
+                                <label for="password">PASSWORD *</label>
+                                <input id="password" type="password"
+                                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                    title="Must contain at least one uppercase character, a special character/number and be at minimum 8 characters long"
+                                    required>
                             </div>
 
                             <div class="form-row-right">
-                                <label for="confirm-password">CONFIRM PASSWORD</label>
-                                <input id="confirm-password" type="password">
+                                <label for="confirm-password">CONFIRM PASSWORD *</label>
+                                <input id="confirm-password" type="password"
+                                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                    title="Must contain at least one uppercase character, a special character/number and be at minimum 8 characters long"
+                                    required>
                             </div>
 
                         </div>
