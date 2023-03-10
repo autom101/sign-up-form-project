@@ -9,6 +9,7 @@
 body {
   height: 100vh;
   display: flex;
+  overflow: hidden;
 }
 
 figure {
@@ -22,52 +23,97 @@ img {
   width: 100%;
 }
 
+figcaption {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+}
+
 .form-side {
   height: 100%;
   width: 50vw;
-  padding-left: 50px;
 }
 
 .form-side,
+header,
 main,
 form,
 .form-top,
-.form-bottom {
+.form-bottom,
+.form-row-left,
+.form-row-right {
   display: flex;
   flex-direction: column;
 }
 
 header {
   height: 30%;
-  width: 50vw;
   background-color: #ce96a6;
+  padding-left: 50px;
+  justify-content: center;
+}
+
+.header-text {
+  font-weight: bold;
+  font-size: 28px;
+  text-align: start;
+
+  width: 70%;
 }
 
 main {
   height: 70%;
-  width: 50vw;
+  width: 100%;
   background-color: #dec0ba;
 }
 
 main > h2 {
   height: 5%;
+  padding-left: 50px;
+}
+
+form {
+  height: 95%;
+  width: 100%;
 }
 
 .form-top {
-  height: 60%;
+  height: 65%;
+  width: 70%;
+  padding-left: 50px;
 }
 
 .form-bottom {
   height: 35%;
   background-color: #ce96a6;
+  padding-left: 50px;
+  justify-content: center;
 }
 
 .form-row {
+  width: 70%;
   display: flex;
+  gap: 75px;
 }
 
 .form-row-left,
 .form-row-right {
-  display: flex;
-  flex-direction: column;
+  width: 45%;
+}
+
+input {
+  width: 250px;
+  height: 30px;
+
+  border: 1px solid lavender;
+  border-radius: 3px;
+}
+
+button {
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #ce96a6;
+  border-radius: 7px;
 }
